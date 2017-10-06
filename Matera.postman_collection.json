@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Matera",
+		"_postman_id": "4640ea17-0912-c31d-a9da-3609f3311a3b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtem as mensagens à serem enviadas",
+			"request": {
+				"url": "http://localhost:8080/maladireta",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"template\": {\n  \t\"shortid\":\"rJ-kfjHWhb\",\n  \t\"recipe\": \"html\"\n  },\n  \"data\": {\n\t  \"title\": \"aaaaaa\",\n\t  \"books\": [\n\t    {\"name\": \"A\", \"author\": \"EU\", \"sales\": 351},\n\t    {\"name\": \"The Lord of the Rings\", \"author\": \"J. R. R. Tolkien\", \"sales\": 125},\n\t    {\"name\": \"The Da Vinci Code\", \"author\": \"Dan Brown\", \"sales\": 255},\n\t    {\"name\": \"The Hobbit\", \"author\": \"J. R. R. Tolkien\", \"sales\": 99}\n\t  ]\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Envia email para os alunos",
+			"request": {
+				"url": "http://127.0.0.1:8080/maladireta",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"nome\": \"Diego\",\n        \"email\": \"diegosanteri@gmail.com\",\n        \"endereco\": \"Rua de teste\",\n        \"cep\": \"13012450\",\n        \"assunto\": \"Boletim Status\",\n        \"mensagem\": \"<html><body><h2>Prezado Diego essas são suas materias</h2><ul><li>Fisica</li><li>Ingles</li><li>Educação Fisica</li><li>Historia</li><li>Matematica</li><li>Portugues</li></ul></body></html>\"\n    },\n    {\n        \"nome\": \"pubja\",\n        \"email\": \"admin@pubja.com\",\n        \"endereco\": \"Rua de teste 2\",\n        \"cep\": \"13012451\",\n        \"assunto\": \"Boletim Status\",\n        \"mensagem\": \"<html><body><h2>Prezado pubja essas são suas materias</h2><ul><li>Fisica</li><li>Ingles</li><li>Educação Fisica</li><li>Historia</li><li>Matematica</li><li>Portugues</li></ul></body></html>\"\n    },\n    {\n        \"nome\": \"Teste\",\n        \"email\": \"diego@pubja.com\",\n        \"endereco\": \"Rua de teste 3\",\n        \"cep\": \"13012410\",\n        \"assunto\": \"Boletim Status\",\n        \"mensagem\": \"<html><body><h2>Prezado Teste essas são suas materias</h2><ul><li>Fisica</li><li>Ingles</li><li>Educação Fisica</li><li>Historia</li><li>Matematica</li><li>Portugues</li></ul></body></html>\"\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Serviço que obtem as notas dos alunos",
+			"request": {
+				"url": "http://127.0.0.1:8080/alunos/123.456.789-01/notas",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Serviço que obtem os alunos",
+			"request": {
+				"url": "http://localhost:8080/alunos",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"template\": {\n  \t\"shortid\":\"rJ-kfjHWhb\",\n  \t\"recipe\": \"html\"\n  },\n  \"data\": {\n\t  \"title\": \"aaaaaa\",\n\t  \"books\": [\n\t    {\"name\": \"A\", \"author\": \"EU\", \"sales\": 351},\n\t    {\"name\": \"The Lord of the Rings\", \"author\": \"J. R. R. Tolkien\", \"sales\": 125},\n\t    {\"name\": \"The Da Vinci Code\", \"author\": \"Dan Brown\", \"sales\": 255},\n\t    {\"name\": \"The Hobbit\", \"author\": \"J. R. R. Tolkien\", \"sales\": 99}\n\t  ]\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

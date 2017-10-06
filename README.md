@@ -14,8 +14,8 @@ Para um maior entendimento pode-se acessar a pagina http://localhost:8080/swagge
 
 Primeiro passo: (Todas operações dessa seção são GET)
 - `--Obtem as mensagens a serem enviadas(Neste caso apenas vai listar as materias dos alunos)`: http://localhost:8080/maladireta
-- `--Obtem as mensagens a serem enviadas(Neste caso apenas vai listar as materias dos alunos reprovados)`: http://localhost:8080/maladireta?search="reproved"
-- `--Obtem as mensagens a serem enviadas(Neste caso apenas vai listar as materias dos alunos aprovados)`: http://localhost:8080/maladireta?search="approved"
+- `--Obtem as mensagens a serem enviadas(Neste caso apenas vai listar as materias dos alunos reprovados)`: http://localhost:8080/maladireta?search=reproved
+- `--Obtem as mensagens a serem enviadas(Neste caso apenas vai listar as materias dos alunos aprovados)`: http://localhost:8080/maladireta?search=approved
 
 Segundo passo:(Essa operação é um POST)
 - `--Envia a mensagem aos alunos(Basta passar o mesmo array recebido das chamadas anteriores)`: http://127.0.0.1:8080/maladireta
